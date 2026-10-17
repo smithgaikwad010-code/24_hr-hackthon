@@ -37,7 +37,7 @@ export default function App() {
   const [commitError, setCommitError] = useState('');
   const [commitUsername, setCommitUsername] = useState('');
   const flashTimer = useRef();
-  const username = view?.profile.username;
+  const username = view?.profile?.username;
 
   const load = useCallback((res) => { setView(res); setHistory(res.history || []); }, []);
 
