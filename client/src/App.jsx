@@ -39,7 +39,7 @@ export default function App() {
   const flashTimer = useRef();
   const username = view?.profile?.username;
 
-  const load = useCallback((res) => { if (!res || !res.assessments) return; setView(res); setHistory(res.history || []); }, []);
+  const load = useCallback((res) => { setView(res); setHistory(res.history || []); }, []);
 
   // Restore the last analysed user
   useEffect(() => {
@@ -100,7 +100,7 @@ export default function App() {
     }
   }
 
-  const demonstrated = view?.assessments?.filter((a) => a.status === 'demonstrated') || [];
+  const demonstrated = view?.assessments.filter((a) => a.status === 'demonstrated') || [];
   const gaps = view?.assessments.filter((a) => a.status !== 'demonstrated') || [];
 
   return (
