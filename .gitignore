@@ -1,0 +1,24 @@
+node_modules
+.env
+dist
+*.log
+.env
+.env.*
+!.env.example
+node_modules/
+client/dist/
+Dependencies
+
+node_modules/
+
+Build output
+
+dist/ client/dist/
+
+Environment variables
+
+.env .env.* !.env.example
+
+Logs
+
+*.log
